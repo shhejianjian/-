@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XHDepartmentViewController">
+            <connections>
+                <outlet property="searchBar" destination="1O1-EQ-MVi" id="asl-rS-dyr"/>
+                <outlet property="subTableView" destination="RH9-Xq-lHI" id="Gsp-5d-lh8"/>
+                <outlet property="tableView" destination="hbA-43-inm" id="ASA-ju-7dm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="输入报修部门相关信息" translatesAutoresizingMaskIntoConstraints="NO" id="1O1-EQ-MVi">
+                    <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="C0M-gM-kzT"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="RZ6-Fu-mjV"/>
+                        <constraint firstAttribute="height" constant="44" id="hcL-9O-J4G"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="vwN-sM-mwe"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hbA-43-inm">
+                    <rect key="frame" x="0.0" y="108" width="240" height="492"/>
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.90980392160000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yR0-LC-pLJ"/>
+                        <outlet property="delegate" destination="-1" id="7Io-kA-dqw"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RH9-Xq-lHI">
+                    <rect key="frame" x="240" y="108" width="360" height="492"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="cMA-um-v0e"/>
+                        <outlet property="delegate" destination="-1" id="ELR-bt-LDy"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="RH9-Xq-lHI" firstAttribute="leading" secondItem="hbA-43-inm" secondAttribute="trailing" id="2Ae-xD-AsD"/>
+                <constraint firstItem="RH9-Xq-lHI" firstAttribute="top" secondItem="1O1-EQ-MVi" secondAttribute="bottom" id="9Tl-vU-BBJ"/>
+                <constraint firstItem="RH9-Xq-lHI" firstAttribute="top" secondItem="1O1-EQ-MVi" secondAttribute="bottom" id="ASI-3G-3l0"/>
+                <constraint firstItem="hbA-43-inm" firstAttribute="top" secondItem="1O1-EQ-MVi" secondAttribute="bottom" id="DBe-F8-iyM"/>
+                <constraint firstAttribute="bottom" secondItem="RH9-Xq-lHI" secondAttribute="bottom" id="DEa-Ta-R4B"/>
+                <constraint firstAttribute="bottom" secondItem="hbA-43-inm" secondAttribute="bottom" id="H90-zZ-G1o"/>
+                <constraint firstAttribute="trailing" secondItem="RH9-Xq-lHI" secondAttribute="trailing" id="OAk-p0-aUS"/>
+                <constraint firstItem="hbA-43-inm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="OmV-8O-kXR"/>
+                <constraint firstItem="1O1-EQ-MVi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="PL9-J2-cDW"/>
+                <constraint firstItem="hbA-43-inm" firstAttribute="top" secondItem="1O1-EQ-MVi" secondAttribute="bottom" id="TPy-qh-e34"/>
+                <constraint firstItem="RH9-Xq-lHI" firstAttribute="leading" secondItem="hbA-43-inm" secondAttribute="trailing" id="Y0a-6o-5SX"/>
+                <constraint firstItem="hbA-43-inm" firstAttribute="top" secondItem="1O1-EQ-MVi" secondAttribute="bottom" id="Z3J-qn-dyg"/>
+                <constraint firstItem="RH9-Xq-lHI" firstAttribute="leading" secondItem="hbA-43-inm" secondAttribute="trailing" id="c1E-vb-6Cz"/>
+                <constraint firstItem="1O1-EQ-MVi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l0k-KO-FVH"/>
+                <constraint firstItem="hbA-43-inm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mMI-PF-o8X"/>
+                <constraint firstItem="RH9-Xq-lHI" firstAttribute="top" secondItem="1O1-EQ-MVi" secondAttribute="bottom" id="qPv-eM-SML"/>
+                <constraint firstAttribute="trailing" secondItem="1O1-EQ-MVi" secondAttribute="trailing" id="wbw-PC-r3v"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

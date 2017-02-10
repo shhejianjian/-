@@ -1,0 +1,10 @@
+platform :ios, '7.0'
+pod "AFNetworking"
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'FontAwesomeKit', '~> 2.2.0'
+pod 'Masonry'
+pod ‘FMDB’
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+

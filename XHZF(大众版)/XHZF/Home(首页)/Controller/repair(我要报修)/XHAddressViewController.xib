@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XHAddressViewController">
+            <connections>
+                <outlet property="searchBar" destination="QeC-bu-7l2" id="LUN-HD-9v6"/>
+                <outlet property="subTableView" destination="Ajn-1q-7YE" id="Mmc-yU-CQc"/>
+                <outlet property="tableView" destination="fmB-hZ-Pq4" id="OGi-P5-4IR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="输入维修地址相关信息" translatesAutoresizingMaskIntoConstraints="NO" id="QeC-bu-7l2">
+                    <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="CUV-ZE-yy6"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="N5o-sn-WXk"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="M0s-2Z-HAw"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-hZ-Pq4">
+                    <rect key="frame" x="0.0" y="108" width="240" height="492"/>
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.90980392160000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="E9C-LQ-u8h"/>
+                        <outlet property="delegate" destination="-1" id="xGB-rd-0vl"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ajn-1q-7YE">
+                    <rect key="frame" x="240" y="108" width="360" height="492"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="KEH-ja-aeC"/>
+                        <outlet property="delegate" destination="-1" id="J3j-Jj-tJw"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ajn-1q-7YE" secondAttribute="bottom" id="9XM-JC-YnG"/>
+                <constraint firstItem="fmB-hZ-Pq4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Abu-4R-8ZP"/>
+                <constraint firstItem="fmB-hZ-Pq4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="Nr9-ca-WEC"/>
+                <constraint firstItem="Ajn-1q-7YE" firstAttribute="top" secondItem="QeC-bu-7l2" secondAttribute="bottom" id="Q9B-fM-OPJ"/>
+                <constraint firstItem="QeC-bu-7l2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="YJ8-ut-Odl"/>
+                <constraint firstAttribute="trailing" secondItem="QeC-bu-7l2" secondAttribute="trailing" id="bzi-nu-JIF"/>
+                <constraint firstAttribute="bottom" secondItem="fmB-hZ-Pq4" secondAttribute="bottom" id="i6h-iU-g9N"/>
+                <constraint firstItem="fmB-hZ-Pq4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="i8F-rV-ABa"/>
+                <constraint firstItem="Ajn-1q-7YE" firstAttribute="leading" secondItem="fmB-hZ-Pq4" secondAttribute="trailing" id="koT-GD-UYB"/>
+                <constraint firstItem="QeC-bu-7l2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lBp-Wi-Jxl"/>
+                <constraint firstItem="Ajn-1q-7YE" firstAttribute="top" secondItem="QeC-bu-7l2" secondAttribute="bottom" id="lob-En-jYQ"/>
+                <constraint firstItem="Ajn-1q-7YE" firstAttribute="leading" secondItem="fmB-hZ-Pq4" secondAttribute="trailing" id="q4l-0m-fwd"/>
+                <constraint firstItem="fmB-hZ-Pq4" firstAttribute="top" secondItem="QeC-bu-7l2" secondAttribute="bottom" id="u7S-En-fOr"/>
+                <constraint firstItem="fmB-hZ-Pq4" firstAttribute="top" secondItem="QeC-bu-7l2" secondAttribute="bottom" id="uJ9-WQ-hI1"/>
+                <constraint firstAttribute="trailing" secondItem="Ajn-1q-7YE" secondAttribute="trailing" id="w7x-oA-bOs"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Abu-4R-8ZP"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
